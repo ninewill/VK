@@ -368,6 +368,58 @@ table {
     background-size: cover;
   }
 }
+/*============== arrow 動畫 ==============*/
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  opacity: 0;
+}
+
+.arrow-1{
+  animation: arrowmov 2s ease-in-out;
+  animation-iteration-count: 3;
+}
+
+.arrow-2{
+  animation: arrowmov 2s 1s ease-in-out;
+  animation-iteration-count: 3;
+}
+
+.arrow:before,.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.arrow:before {
+  transform: rotate(45deg)
+  translateX(-23%);
+  transform-origin: top left;
+}
+.arrow:after {
+  transform: rotate(-45deg)
+    translateX(23%);
+  transform-origin: top right;
+}
+@keyframes arrowmov {
+  0% {
+    opacity: 0;
+    top: 80%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*============== arrow ==============*/
 .hline .unit1{
     position: absolute;
