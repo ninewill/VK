@@ -1,0 +1,46 @@
+
+.load {
+  overflow: hidden;
+  font-family: Roboto;
+  position: fixed;
+  background: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+.load .counter {
+  text-align: center;
+}
+.load .counter p {
+  font-size: 40px;
+  font-weight: 100;
+  color: #f60d54;
+}
+.load .counter h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: -10px;
+}
+.load .counter hr {
+  background: #f60d54;
+  border: none;
+  height: 1px;
+}
+.load .counter {
+  position: relative;
+  width: 200px;
+}
+.load .counter h1.abs {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.load .counter .color {
+  width: 0px;
+  overflow: hidden;
+  color: #f60d54;
+}

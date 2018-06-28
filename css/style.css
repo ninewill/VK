@@ -1,0 +1,3204 @@
+* {
+    /*outline: 1px solid #f0f;*/
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+/*============== warp start =================*/
+
+.warp {
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 999;
+}
+
+nav {
+    position: fixed;
+    width: 230px;
+    height: 100%;
+    display: block;
+    background: #fff;
+    left: -135px;
+    z-index: 999;
+    transition: .1s;
+    border-left: 1px solid transparent;
+}
+
+nav:hover {
+    left: 0px;
+}
+
+.logo {
+    float: right;
+}
+
+.logo img {
+    vertical-align: middle;
+    padding-top: 10px;
+    width: 73px;
+    height: 161px;
+}
+
+.icomu {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 31px;
+    display: block;
+}
+
+.icomu img {
+    vertical-align: middle;
+}
+
+.menuLine {
+    position: absolute;
+    right: 0;
+    width: 95px;
+    height: 100%;
+    border-left: 1px solid #222;
+    border-style: dotted;
+}
+
+.menu {
+    font-family: Helvetica;
+    left: 0;
+    margin: 8px 0 0 2px;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+
+
+
+
+/*==========側欄選單1==============*/
+
+.first_menu {
+    margin: 0 -35px 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+.first_menu .area_menu {
+    display: block;
+    width: 94px;
+    height: 38px;
+    margin: 10px 0;
+    padding-bottom: 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.first_menu ul li {
+    display: block;
+    margin: 5px 10px;
+    background: #938473;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.first_menu .hvr-outline-out {
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+
+
+
+/*==========側欄選單2==============*/
+
+.menu .second li {
+    margin: 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.hvr-under-center {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-under-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #938473;
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.hvr-under-center:hover:before {
+    left: 0;
+    right: 0;
+}
+
+.menu .second .about01 {
+    background: url("../img/icon/asset 158.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .addiction02 {
+    background: url("../img/icon/asset 159.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .agenda03 {
+    background: url("../img/icon/asset 160.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .affection04 {
+    background: url("../img/icon/asset 161.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .access05 {
+    background: url("../img/icon/asset 162.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second li a {
+    display: block;
+    width: 94px;
+    height: 38px;
+    padding-bottom: 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+
+
+
+/*==========側欄選單效果==============*/
+
+.hvr-outline-out {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.hvr-outline-out:before {
+    content: '';
+    position: absolute;
+    border: 4px solid #938473;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    /*屬性規定完成過度效果需要花費的時間*/
+    transition-property: top, right, bottom, left;
+}
+
+.hvr-outline-out:hover:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+}
+
+.menu .first_menu .area_menu {
+    background: url("../img/icon/asset 156.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+
+
+
+
+
+
+/*=============== hamburger02 ==================*/
+
+#rwd-main-menu {
+    display: none;
+}
+
+.tIcons {
+    padding: 10px;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.tIcons svg {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+.tIcons svg:first-child {
+    transform-origin: 50% 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.tIcons svg:last-child {
+    transform-origin: 50% 50%;
+    transition: 0.2s ease-in-out;
+    transform: scale(0);
+}
+
+.tIcons.toggle svg:first-child {
+    transform: scale(0);
+}
+
+.tIcons.toggle svg:last-child {
+    transform: scale(1);
+}
+
+.rwd-menu {
+    background: #111;
+    margin-top: 10px;
+    padding: 10px;
+    display: none;
+    width: 200px;
+    top: 50px;
+    position: fixed;
+    z-index: 20;
+}
+
+.rwd-menu li {
+    list-style: none;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.rwd-menu a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rwd-menu a:hover,
+a:focus {
+    color: #A52124;
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        display: none;
+    }
+    #rwd-main-menu {
+        display: block;
+    }
+}
+
+
+
+/*==================共用區=====================*/
+
+.hline {
+    position: relative;
+    padding-top: 200px;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.hlineRwd {
+    position: relative;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.hline img {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+
+
+
+
+/*============== unit1 star =================*/
+
+.idx1 {
+    position: relative;
+    width: 100%;
+}
+
+.mainBox1 {
+    background: url("../img/equipment/01-2.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit1 {
+    position: absolute;
+    display: block;
+    bottom: 180px;
+    margin-left: -8px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+
+
+/*============== arrow 動畫 ==============*/
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    opacity: 0;
+}
+
+.arrow-1 {
+    animation: arrowmov 2s ease-in-out 6;
+}
+
+.arrow-2 {
+    animation: arrowmov 2s 1s ease-in-out 6;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+@keyframes arrowmov {
+    0% {
+        opacity: 0;
+        top: 85%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox1 {
+        background: url("../img/equipment/01-2.jpg") -300px no-repeat;
+        background-size: cover;
+    }
+    .hline img {
+        width: 90%;
+    }
+    .hline {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .hline .unit1 {
+        bottom: 37%;
+        margin-left: -8px;
+        width: 35px;
+        height: 35px;
+        line-height: 45px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .arrow {
+        left: 50%;
+        top: 75%;
+    }
+    .arrow:before,
+    .arrow:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+    }
+    @keyframes arrowmov {
+        0% {
+            opacity: 0;
+            top: 70%;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+/*============== unit2 star =================*/
+
+.idx2 {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.mainBox2 {
+    position: relative;
+    background: url("../img/background/asset 33.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox2 .bt2 {
+    background: url("../img/icon/asset 7-1.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 300px;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.contentIdx2 {
+    position: relative;
+    padding-top: 100px;
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    text-align: center;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.contentIdx2 img {
+    margin: auto;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.bgPoint {
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    text-align: center;
+    background: url("../img/background/asset 164.png") repeat;
+    background-color: #222;
+}
+
+.bgPoint ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bgPoint ul li {
+    position: relative;
+    padding: 10px;
+}
+
+.titleImage {
+    max-width: 202px;
+    max-height: 432px;
+}
+
+.bgPoint ul li img {
+    width: 100%;
+}
+
+.bgPoint .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 63px;
+    height: 63px;
+    margin: -31px 0 0 -31px;
+    background: url("../img/icon/asset 165.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.bgPoint .eff_Mask {
+    width: 202px;
+    height: 432px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.bgPoint li:hover .eff_Mask {
+    opacity: 1;
+}
+
+.contxt2 {
+    position: relative;
+    padding-top: 100px;
+    bottom: 25px;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.contxt2 h2 {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.contxt2 p {
+    line-height: 20px;
+}
+
+.contxtbd {
+    margin: 0 0 10px 0;
+    padding: 0 8px;
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
+
+.contxtbd .left {
+    float: left;
+    width: 47%;
+    line-height: 25px;
+}
+
+.contxtbd .right {
+    float: right;
+    width: 47%;
+    line-height: 25px;
+}
+
+.contxtft {
+    margin: 0 0 10px 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
+
+.contxtft .left {
+    float: left;
+    width: 47%;
+}
+
+.contxtft .right {
+    float: right;
+    width: 47%;
+}
+
+
+
+
+
+/*====================maskbox==========================*/
+
+.btn-main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main4 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-mainbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 760px;
+    height: 460px;
+    padding: 20px;
+    background-image: url("../img/maskbox/mskbox01.png");
+}
+
+.btn-mainbox2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 760px;
+    height: 460px;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox02.png");
+}
+
+.btn-mainbox3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 760px;
+    height: 460px;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox03.png");
+}
+
+.btn-mainbox4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 760px;
+    height: 460px;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox04.png");
+}
+
+.btn-close {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 40px;
+    height: 41px;
+    background-image: url("../img/icon/asset 176.png");
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox2 .bt2 {
+        display: none;
+    }
+    .contxtft {
+        display: none;
+    }
+    .mainBox2 {
+        background: url("../img/background/asset 33.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .bt2Rwd {
+        background: url("../img/icon/asset 7-1.png") no-repeat;
+        position: absolute;
+        background-position: 10% 10%;
+        width: 100%;
+        min-height: 200px;
+        z-index: 5;
+        background-size: 100%;
+        display: block;
+    }
+    .idx2 {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .bgPoint ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0;
+    }
+    .bgPoint ul li {
+        width: 40%;
+        height: 100%;
+        position: relative;
+    }
+    .titleImage {
+        max-width: 302px;
+        max-height: 332px;
+        overflow: hidden;
+    }
+    .bgPoint .plus {
+        transform: scale(0.5);
+    }
+    .bgPoint .eff_Mask {
+        display: none;
+    }
+    .contxt2 {
+        padding-top: 50px;
+        font: 16px/18px "Gill Sans MT";
+    }
+    .contxt2 p {
+        line-height: 30px;
+    }
+    .contxtft p {
+        line-height: 25px;
+    }
+
+    /*====================maskbox==========================*/
+    .btn-main {
+        margin: 0px;
+    }
+    .btn-main2 {
+        margin: 0px;
+    }
+    .btn-main3 {
+        margin: 0px;
+    }
+    .btn-main4 {
+        margin: 0px;
+    }
+    .btn-mainbox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/mskbox01.png");
+    }
+    .btn-mainbox2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox02.png");
+    }
+    .btn-mainbox3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox03.png");
+    }
+    .btn-mainbox4 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox04.png");
+    }
+    .btn-close {
+        position: absolute;
+        right: 0;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 41px;
+        background-image: url("../img/icon/asset 176.png");
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+/*============== unit3 star =================*/
+
+.idx3 {
+    position: relative;
+    width: 100%;
+}
+
+.mainBox3 {
+    background: url("../img/background/asset 38.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.hline .unit3 {
+    position: absolute;
+    display: block;
+    bottom: 188px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox3 {
+        background: url("../img/background/asset 38.jpeg") -270px no-repeat;
+        background-size: cover;
+    }
+    .hline img {
+        width: 90%;
+    }
+    .hline {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .hline .unit3 {
+        bottom: 37.5%;
+        margin-left: -12px;
+        width: 35px;
+        height: 35px;
+        line-height: 45px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+/*============== unit4 star =================*/
+
+.idx4 {
+    width: 100%;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+
+.mainBox4 {
+    position: relative;
+    background: url("../img/background/asset 20.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox4 .bt4 {
+    background: url("../img/icon/asset 4-1.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.sliderKnife {
+    position: relative;
+    padding-top: 200px;
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    text-align: center;
+}
+
+.sliderKnife #abgneBlock {
+    position: absolute;
+    width: 940px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sliderKnife #abgneBlock ul.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.sliderKnife #abgneBlock ul.list li {
+    float: left;
+    width: 940px;
+    height: 100%;
+}
+
+.sliderKnife #abgneBlock .list img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.sliderKnife #abgneBlock ul.playerControl {
+    margin: auto;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    height: 14px;
+}
+
+.sliderKnife #abgneBlock ul.playerControl li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 2px;
+    background: url("../img/icon/asset 166.png") no-repeat 0 0;
+}
+
+.sliderKnife #abgneBlock ul.playerControl li.current {
+    background-position: -23px 0;
+}
+
+.sliderKnife #abgneBlock ul.playerControl li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 15px;
+    background: url("../img/icon/asset 166.png") no-repeat 0px 0;
+}
+
+.sliderKnife #abgneBlock ul.playerControl li.current {
+    background-position: 0 0;
+}
+
+.contxt4 {
+    position: relative;
+    top: 400px;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.contxt4 h2 {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.contxt4 p {
+    line-height: 20px;
+}
+
+.svgKnife {
+    position: relative;
+    max-width: 330px;
+    left: 80%;
+    display: block;
+    z-index: 3;
+    text-align: center;
+    transform: rotate(60deg);
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox4 .bt4 {
+        display: none;
+    }
+    .idx4 {
+        width: 100%;
+        padding-bottom: 250px;
+    }
+
+    .mainBox4 {
+        background: url("../img/background/asset 20.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .bt4Rwd {
+        background: url("../img/icon/asset 4-1.png") no-repeat;
+        background-position: 10% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 220px;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .sliderKnife #abgneBlock .list img {
+        width: 35%;
+        height: 35%;
+        border: 0;
+        vertical-align: middle;
+    }
+    .sliderKnife #abgneBlock ul.playerControl {
+        bottom: 175px;
+        height: 14px;
+    }
+    .contxt4 {
+        top: 200px;
+        font: 16px/18px "Gill Sans MT";
+    }
+    .contxt4 p {
+        line-height: 30px;
+    }
+    .contxtft p {
+        line-height: 22px;
+    }
+    .svgKnife {
+        display: none;
+    }
+}
+
+
+
+
+
+/*============== unit5 star =================*/
+
+.idx5 {
+    width: 100%;
+}
+
+.mainBox5 {
+    position: relative;
+    background: url("../img/background/asset 18.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.hline .unit5 {
+    position: absolute;
+    display: block;
+    bottom: 175px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox5 {
+        background: url("../img/background/asset 18.jpeg") -200px no-repeat;
+        background-size: cover;
+    }
+    .hline img {
+        width: 90%;
+    }
+    .hline {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .hline .unit5 {
+        bottom: 36.5%;
+        margin-left: -11px;
+        width: 35px;
+        height: 35px;
+        line-height: 45px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+/*============== unit6 star =================*/
+
+.idx6 {
+    width: 100%;
+    padding-bottom: 500px;
+    overflow: hidden;
+}
+
+.mainBox6 {
+    position: relative;
+    background: url("../img/background/asset 33.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox6 .bt6 {
+    background: url("../img/icon/asset 34.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 400px;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.sliderPot {
+    position: relative;
+    padding-top: 200px;
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    text-align: center;
+}
+
+.sliderPot #abgneBlock2 {
+    position: absolute;
+    width: 415px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sliderPot #abgneBlock2 ul.list2 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.sliderPot #abgneBlock2 ul.list2 li {
+    float: left;
+    width: 415px;
+    height: 100%;
+}
+
+.sliderPot #abgneBlock2 .list2 img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.sliderPot #abgneBlock2 ul.playerControl2 {
+    margin: auto;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    height: 14px;
+}
+
+.sliderPot #abgneBlock2 ul.playerControl2 li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 2px;
+    background: url("../img/icon/asset 166.png") no-repeat 0 0;
+}
+
+.sliderPot #abgneBlock2 ul.playerControl2 li.current2 {
+    background-position: -23px 0;
+}
+
+.sliderPot #abgneBlock2 ul.playerControl2 li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 15px;
+    background: url("../img/icon/asset 166.png") no-repeat 0px 0;
+}
+
+.sliderPot #abgneBlock2 ul.playerControl2 li.current2 {
+    background-position: 0 0;
+}
+
+.contxt6 {
+    position: relative;
+    top: 450px;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.contxt6 h2 {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.contxt6 p {
+    line-height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox6 .bt6 {
+        display: none;
+    }
+    .mainBox6 {
+        background: url("../img/background/asset 33.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .bt6Rwd {
+        background: url("../img/icon/asset 34.png") no-repeat;
+        background-position: 10% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 220px;
+        z-index: 5;
+        background-size: 100%;
+    }
+
+    .sliderPot {
+        padding-top: 100px;
+    }
+    .sliderPot #abgneBlock2 .list2 img {
+        width: 80%;
+        height: 80%;
+        border: 0;
+        vertical-align: middle;
+    }
+    .sliderPot #abgneBlock2 ul.playerControl2 {
+        bottom: 15px;
+        height: 14px;
+    }
+    .contxt6 {
+        top: 450px;
+        font: 16px/18px "Gill Sans MT";
+    }
+    .contxt6 p {
+        line-height: 30px;
+    }
+    .contxtft p {
+        line-height: 22px;
+    }
+    .sliderPot #abgneBlock2 {
+        position: absolute;
+        width: 415px;
+        height: 400px;
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        z-index: 10;
+    }
+}
+
+
+
+
+
+/*============== unit7 star =================*/
+
+.idx7 {
+    width: 100%;
+}
+
+.mainBox7 {
+    position: relative;
+    background: url("../img/background/horta_cozinha.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.hline .unit7 {
+    position: absolute;
+    display: block;
+    bottom: 180px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox7 {
+        background: url("../img/background/horta_cozinha.jpg") -200px no-repeat;
+        background-size: cover;
+    }
+    .hline img {
+        width: 90%;
+    }
+    .hline {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .hline .unit7 {
+        bottom: 36.5%;
+        margin-left: -11px;
+        width: 35px;
+        height: 35px;
+        line-height: 45px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+/*============== unit8 star =================*/
+
+.idx8 {
+    width: 100%;
+    /*padding-bottom: 750px;*/
+}
+
+.mainBox8 {
+    position: relative;
+    background: url("../img/background/asset 20.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox8 .bt8 {
+    background: url("../img/icon/asset 47.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 350px;
+    display: block;
+    text-align: center;
+    z-index: 1;
+}
+
+.contxt8 {
+    position: relative;
+    /*    top: 300px;*/
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 1;
+    text-align: center;
+}
+
+.page {
+    position: relative;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    height: 1000px;
+    margin: auto;
+    display: block;
+    z-index: 1;
+    text-align: center;
+}
+
+.contxt8 h2 {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.contxt8 p {
+    line-height: 20px;
+}
+
+.bgBox2 {
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    text-align: center;
+}
+
+.bgBox2 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bgBox2 ul li {
+    position: relative;
+    padding: 10px;
+}
+
+.titleImage2 {
+    max-width: 229px;
+    max-height: 400px;
+}
+
+.bgBox2 ul li img {
+    width: 100%;
+}
+
+.bgBox2 .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 63px;
+    height: 63px;
+    margin: -31px 0 0 -31px;
+    background: url("../img/icon/asset 165.png") no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.bgBox2 .eff_Mask {
+    width: 229px;
+    height: 369.8px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .8s;
+    transform: scale(1);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.bgBox2 li:hover .eff_Mask {
+    opacity: 1;
+}
+
+
+
+
+
+/*====================maskbox==========================*/
+
+.btn-main5 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main6 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main7 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-mainbox5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox05.png");
+}
+
+.btn-mainbox6 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox06.png");
+}
+
+.btn-mainbox7 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox07.png");
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox8 .bt8 {
+        display: none;
+    }
+    .idx8 {
+        padding-bottom: 50px;
+    }
+    .mainBox8 {
+        background: url("../img/background/asset 20.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .bt8Rwd {
+        background: url("../img/icon/asset 47.png") no-repeat;
+        background-position: 10% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 220px;
+        z-index: 0;
+        background-size: 100%;
+    }
+    .contxt8 {
+        position: relative;
+        top: 300px;
+    }
+    .page {
+        height: 500px;
+    }
+    .bgBox2 {
+        padding-top: 200px;
+    }
+    .bgBox2 ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0;
+    }
+    .bgBox2 ul li {
+        width: 48%;
+        height: 100%;
+        position: relative;
+        flex-grow: 1;
+    }
+    .titleImage2 {
+        max-width: 100%;
+        max-height: 330px;
+        overflow: hidden;
+    }
+    .titleImage2 img {
+        position: relative;
+        top: -100px;
+    }
+    .bgBox2 .plus {
+        transform: scale(0.5);
+    }
+    .bgBox2 .eff_Mask {
+        display: none;
+    }
+    .contxt8 {
+        top: 200px;
+        font: 16px/18px "Gill Sans MT";
+    }
+    .contxt8 p {
+        line-height: 25px;
+    }
+    .contxtft p {
+        line-height: 20px;
+    }
+    /*====================maskbox==========================*/
+    .btn-main5 {
+        margin: 0px;
+    }
+    .btn-main6 {
+        margin: 0px;
+    }
+    .btn-main7 {
+        margin: 0px;
+    }
+    .btn-mainbox5 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox05.png");
+    }
+    .btn-mainbox6 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox06.png");
+    }
+    .btn-mainbox7 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 260px;
+        height: 500px;
+        background-image: url("../img/maskbox/maskbox07.png");
+    }
+    .btn-close {
+        position: absolute;
+        right: 0;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 41px;
+        background-image: url("../img/icon/asset 176.png");
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+/*============== unit9 star =================*/
+
+.idx9 {
+    width: 100%;
+}
+
+.mainBox9 {
+    position: relative;
+    background: url("../img/background/bbq.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.hline .unit9 {
+    position: absolute;
+    display: block;
+    bottom: 150px;
+    margin-left: 3px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox9 {
+        background: url("../img/background/bbq.jpg") -330px no-repeat;
+        background-size: cover;
+    }
+    .hline img {
+        width: 90%;
+    }
+    .hline {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .hline .unit9 {
+        bottom: 33.8%;
+        margin-left: -3px;
+        width: 35px;
+        height: 35px;
+        line-height: 45px;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+/*============== unit10 star =================*/
+
+.idx10 {
+    width: 100%;
+    padding-bottom: 210px;
+    overflow: hidden;
+}
+
+.mainBox10 {
+    position: relative;
+    background: url("../img/background/asset 58.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox10 .bt10 {
+    background: url("../img/icon/asset 59.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 400px;
+    display: block;
+    text-align: center;
+    z-index: 1;
+}
+
+.goSun {
+    position: relative;
+    padding-top: 100px;
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    text-align: center;
+}
+
+.contxt10 {
+    position: relative;
+    padding-top: 100px;
+    bottom: 25px;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.contxt10 .contxthd .txt p {
+    padding-top: 15px;
+}
+
+.contxt10 .contxtft .txt p {
+    padding-top: 15px;
+}
+
+.contxt10 .contxthd {
+    position: relative;
+    margin: 0 0 60px 0;
+    width: 960px;
+    height: 311px;
+    margin: auto;
+}
+
+.contxt10 .contxthd .txt {
+    width: 50%;
+    float: left;
+    padding: 30px 50px 0 30px;
+    display: table-cell;
+    zoom: 1;
+    vertical-align: top;
+    line-height: 23px;
+}
+
+.contxt10 .contxtft {
+    position: relative;
+    width: 960px;
+    margin: auto;
+}
+
+.contxt10 .contxtft .txt {
+    width: 50%;
+    padding: 30px 20px 0 50px;
+    float: right;
+    vertical-align: top;
+    line-height: 20px;
+}
+
+.pot img {
+    padding-top: 5%;
+    width: 100%;
+}
+
+.smoke {
+    background: url("../img/gosun/asset 65.png") repeat;
+    position: relative;
+    padding-top: 100px;
+    max-width: 960px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    z-index: 50;
+}
+
+
+
+
+
+/*=====img 放大特效=====*/
+
+.photo {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contxt10 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.contxt10 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.photo2 {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contxt10 .photo2 img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.contxt10 .photo2:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox10 .bt10 {
+        display: none;
+    }
+    .mainBox10 {
+        background: url("../img/background/asset 58.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .bt10Rwd {
+        background: url("../img/icon/asset 59.png") no-repeat;
+        background-position: 10% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 220px;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .idx10 {
+        padding-bottom: 0px;
+    }
+    .goSun {
+        padding-top: 150px;
+    }
+    .goSun img {
+        margin: auto;
+        width: 100%;
+        vertical-align: middle;
+    }
+    .contxt10 .contxthd .txt {
+        display: none;
+    }
+    .contxtft .txt {
+        display: none;
+    }
+    .contxt10 .contxthd {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .contxt10 .photo {
+        width: 100%;
+        height: 100%;
+    }
+    .contxt10 .contxtft {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contxt10 .photo2 {
+        width: 100%;
+        height: 100%;
+    }
+    .smoke {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 400px;
+    }
+    .pot {
+        width: 100%;
+    }
+    .pot img {
+        position: relative;
+        left: -25%;
+        width: 150%;
+    }
+}
+
+
+
+
+
+/*============== unit11 star =================*/
+
+.idx11 {
+    width: 100%;
+}
+
+.mainBox11 {
+    position: relative;
+    background: url("../img/background/CC011_T_Email.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.ptslide {
+    position: relative;
+    display: flex;
+    padding: 100px 0;
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    text-align: left;
+}
+
+.vkTitle {
+    align-self: center;
+}
+
+.aboutTxt {
+    padding: 20px;
+    color: #fff;
+    font: 16px/18px "Gill Sans MT";
+    line-height: 20px;
+}
+
+.aboutTxt span {
+    line-height: 30px;
+}
+
+.last {
+    margin: 30px 0 0 0;
+}
+
+.vkTitleRwd {
+    display: none;
+}
+
+.svg-wrapper {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 320px;
+}
+
+.svg-wrapper a {
+    text-decoration: none;
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #A52124;
+}
+
+.text {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+    text-align: center;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+.svg-wrapper:hover .shape {
+    animation: 0.5s draw linear forwards;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox11 {
+        background: url("../img/background/CC011_T_Email.jpg") -800px no-repeat;
+        background-size: cover;
+    }
+    .ptslide {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 50px;
+        max-width: 960px;
+        margin: auto;
+        z-index: 3;
+    }
+    .vkTitle {
+        display: none;
+    }
+    .vkTitleRwd {
+        display: block;
+        align-self: center;
+    }
+    .aboutTxt {
+        padding: 20px;
+        color: #fff;
+        font: 16px/18px "Gill Sans MT";
+        line-height: 20px;
+    }
+    .aboutTxt .entxt {
+        display: none;
+    }
+    .last {
+
+        margin: 30px 0 0 0;
+    }
+    .svg-wrapper {
+        height: 60px;
+        margin: 0 auto;
+        position: relative;
+        top: 30px;
+        transform: translateY(-50%);
+        width: 200px;
+    }
+    .shape {
+        width: 200px;
+        fill: transparent;
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+        stroke: #A52124;
+    }
+    .timeBtn {
+        height: 60px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*============== unit12 star =================*/
+
+.idx12 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainBox12 {
+    position: relative;
+    background: url("../img/background/CC022_T_cooling.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.ptslide2 {
+    position: relative;
+    display: flex;
+    padding-top: 50px;
+    max-width: 960px;
+    margin: auto;
+    z-index: 3;
+    padding-bottom: 300px;
+}
+
+.ptslide2 img {
+    margin: auto;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.petal1 {
+    background: url("../img/icon/onion.png") no-repeat;
+    position: absolute;
+    top: 100px;
+    left: -70%;
+    width: 100%;
+    height: 1005px;
+    z-index: -1;
+}
+
+.petal2 {
+    background: url("../img/icon/asset 130.png") no-repeat;
+    position: absolute;
+    top: 100px;
+    right: -80%;
+    width: 100%;
+    height: 638px;
+    text-align: center;
+    z-index: -1;
+}
+
+.petal3 {
+    background: url("../img/icon/Romanvegetables .png") no-repeat;
+    position: absolute;
+    right: -50%;
+    bottom: -200px;
+    width: 100%;
+    height: 750px;
+    z-index: -1;
+}
+
+.petal4 {
+    background: url("../img/icon/potato.png") no-repeat;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    width: 488px;
+    height: 640px;
+    text-align: center;
+    z-index: -1;
+}
+
+.petal11Rwd {
+    display: none;
+}
+
+.petal22Rwd {
+    display: none;
+}
+
+.petal33Rwd {
+    display: none;
+}
+
+.petal44Rwd {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox12 {
+        background: url("../img/background/CC022_T_cooling.jpg") -450px no-repeat;
+        background-size: cover;
+    }
+    .petal1 {
+        display: none;
+    }
+    .petal2 {
+        display: none;
+    }
+    .petal3 {
+        display: none;
+    }
+    .petal4 {
+        display: none;
+    }
+    .petal11Rwd {
+        display: block;
+        position: relative;
+        left: -190%;
+        top: 400px;
+    }
+    .petal11Rwd img {
+        width: 700px;
+        height: 500px;
+    }
+    .petal22Rwd {
+        display: block;
+        position: relative;
+        left: -200%;
+        top: 500px;
+    }
+    .petal22Rwd img {
+        width: 150px;
+        height: 150px;
+    }
+    .petal33Rwd {
+        display: block;
+        position: relative;
+        z-index: -1;
+        left: -260%;
+        top: -30px;
+    }
+    .petal33Rwd img {
+        width: 200px;
+        height: 200px;
+    }
+    .petal44Rwd {
+        display: block;
+        position: relative;
+        z-index: 1;
+        left: -360%;
+        top: 50px;
+    }
+    .petal44Rwd img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+/*============== unit13 star =================*/
+
+.idx13 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainBox13 {
+    position: relative;
+    background: url("../img/background/asset 143.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.ptslide3 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 100px;
+    padding-left: 10%;
+    /*max-width: 1200px;*/
+    width: 100%;
+    margin: auto;
+    z-index: 3;
+    padding-bottom: 100px;
+}
+
+.newsTitle {
+    align-self: center;
+}
+
+.newsTitle img {
+    vertical-align: middle;
+}
+
+.slickLiBox a {
+    text-decoration: none;
+}
+
+
+
+
+/*====1====*/
+
+.slickBox1 .photo {
+    overflow: hidden;
+    width: 100%;
+    height: 262px;
+    position: relative;
+}
+
+.slickBox1 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+    width: 100%;
+}
+
+.slickBox1 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.slickBox1 .conMain {
+    padding: 10px 15px 15px 15px;
+    text-align: left;
+    color: #777;
+    background: #ededed;
+}
+
+.slickBox1 .date {
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.slickBox1 .areaMain {
+    font-family: "微軟正黑體";
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.slickBox1 .titleMain {
+    font-family: "微軟正黑體";
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    height: 2.4em;
+    overflow: hidden;
+}
+
+
+
+
+/*====2====*/
+
+.slickBox2 .photo {
+    overflow: hidden;
+    width: 100%;
+    height: 262px;
+    position: relative;
+}
+
+.slickBox2 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+    width: 100%;
+}
+
+.slickBox2 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.slickBox2 .conMain {
+    padding: 10px 15px 15px 15px;
+    text-align: left;
+    color: #777;
+    background: #ededed;
+}
+
+.slickBox2 .date {
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.slickBox2 .areaMain {
+    font-family: "微軟正黑體";
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.slickBox2 .titleMain {
+    font-family: "微軟正黑體";
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    height: 2.4em;
+    overflow: hidden;
+}
+
+
+
+
+/*====3====*/
+
+.slickBox3 .photo {
+    overflow: hidden;
+    width: 100%;
+    height: 262px;
+    position: relative;
+}
+
+.slickBox3 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+    width: 100%;
+}
+
+.slickBox3 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.slickBox3 .conMain {
+    padding: 10px 15px 15px 15px;
+    text-align: left;
+    color: #777;
+    background: #ededed;
+}
+
+.slickBox3 .date {
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.slickBox3 .areaMain {
+    font-family: "微軟正黑體";
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.slickBox3 .titleMain {
+    font-family: "微軟正黑體";
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    height: 2.4em;
+    overflow: hidden;
+}
+
+
+
+
+/*====4====*/
+
+.slickBox4 .photo {
+    overflow: hidden;
+    width: 100%;
+    height: 262px;
+    position: relative;
+}
+
+.slickBox4 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+    width: 100%;
+}
+
+.slickBox4 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.slickBox4 .conMain {
+    padding: 10px 15px 15px 15px;
+    text-align: left;
+    color: #777;
+    background: #ededed;
+}
+
+.slickBox4 .date {
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.slickBox4 .areaMain {
+    font-family: "微軟正黑體";
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.slickBox4 .titleMain {
+    font-family: "微軟正黑體";
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    height: 2.4em;
+    overflow: hidden;
+}
+
+.slickLiBox {
+    position: relative;
+    padding-bottom: 24px;
+    background: url("../img/icon/asset 168.png") -6px 387px no-repeat;
+    z-index: 5;
+}
+
+.slick-slide {
+    padding: 0 20px;
+    position: relative;
+    animation: ghostUpdown 1s infinite alternate;
+}
+
+.slick-current {
+    padding: 0 20px;
+    position: relative;
+    animation: ghostUpdown 1.2s infinite alternate;
+}
+
+.slick-current2 {
+    padding: 0 20px;
+    position: relative;
+    animation: ghostUpdown 1.4s infinite alternate;
+}
+
+.slick-current3 {
+    padding: 0 20px;
+    position: relative;
+    animation: ghostUpdown 1.6s infinite alternate;
+}
+
+@keyframes ghostUpdown {
+    from {
+        top: 10px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox13 {
+        background: url("../img/background/asset 143.jpeg") no-repeat;
+        background-size: cover;
+    }
+    .idx13 {
+        width: 100%;
+        height: 1000px;
+        padding-bottom: 1000px
+    }
+    .ptslide3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 300px;
+        padding-top: 100px;
+        margin: auto;
+        z-index: 3;
+        padding-bottom: 100px;
+    }
+    .slickBox1 .photo {
+        overflow: hidden;
+        width: 100%;
+        height: 262px;
+    }
+    .newsTitle {
+        align-self: flex-start;
+        padding-bottom: 10px;
+    }
+    .slickBox1 {
+        width: 262px;
+    }
+    .slickBox2 {
+        width: 262px;
+    }
+    .slickBox3 {
+        width: 262px;
+    }
+    .slickBox4 {
+        width: 262px;
+    }
+}
+
+
+
+
+
+/*============== unit14 star =================*/
+
+.idx14 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainBox14 {
+    position: relative;
+    background: url("../img/background/bg-marble.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.parallex4 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 10%;
+    /*max-width: 1200px;*/
+    width: 100%;
+    margin: auto;
+    z-index: 3;
+}
+
+.people {
+    width: 407px;
+    position: absolute;
+    top: -231px;
+    left: 5%;
+    display: block;
+    z-index: 3;
+}
+
+.peopleWall {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.peopleWall li {
+    padding: 1.5px;
+    width: 200px;
+    height: 300px;
+}
+
+.peopleWall li img {
+    width: 100%;
+    height: 100%;
+}
+
+.bgPoint01 {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background/point.png") repeat;
+    opacity: .6;
+    z-index: 4;
+}
+
+.vkOption {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 500px;
+    top: 150px;
+    left: 60%;
+    z-index: 1;
+}
+
+.VkSlogan {
+    padding: 10px;
+    margin: auto;
+}
+
+.VkSlogan img {
+    vertical-align: middle;
+}
+
+.twoPeople {
+    margin: auto;
+}
+
+.christine {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    perspective: 1000;
+    padding-right: 40px;
+    float: left;
+}
+
+.jason {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    perspective: 1000;
+    float: right;
+}
+
+
+/* 翻轉視窗180度 */
+
+.christine:hover .flipper,
+.christine.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.jason:hover .flipper,
+.jason.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.christine,
+.front,
+.back {
+    width: 170px;
+    height: 170px;
+}
+
+.front img,
+.back img {
+    width: 100%;
+}
+
+.jason,
+.front,
+.back {
+    width: 170px;
+    height: 170px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.front img {
+    border-radius: 50%;
+}
+
+.back img {
+    border-radius: 50%;
+}
+
+.subtitle {
+    margin: auto;
+}
+
+.subtitle img {
+    vertical-align: middle;
+}
+
+.subtitle2 {
+    padding-top: 10px;
+    margin: auto;
+}
+
+.subtitle2 img {
+    vertical-align: middle;
+}
+
+.sub2sLogan p {
+    text-align: left;
+    font: 16px/18px "Gill Sans MT";
+    margin: 20px 0 20px 0;
+    color: #3c3d3d;
+}
+
+form {
+    margin: auto;
+}
+
+.row {
+    overflow: hidden;
+    width: 500px;
+    padding: 5px 0;
+    margin: 0 0 7px 0;
+    background: #e4e4e4;
+    clear: both;
+}
+
+.row label {
+    float: left;
+    width: 85px;
+    padding: 0 0 0 20px;
+    font: 16px/18px "Gill Sans MT";
+    color: #969696;
+    background: url(../img/icon/affection-icon.gif) no-repeat 10px 4px;
+}
+
+.row input {
+    width: 305px;
+    height: 30px;
+    font: 18px/20px "Gill Sans MT";
+    color: #505050;
+    border: 0;
+    background: #e4e4e4;
+}
+
+.col {
+    position: relative;
+    left: 365%;
+    top: -15px;
+    float: right;
+    width: 305px;
+}
+
+fieldset .btn {
+    width: 160px;
+    height: 31px;
+    border: 0;
+    background: url("../img/icon/asset 171.jpeg") no-repeat 0 0;
+    cursor: pointer;
+}
+
+.stoneHead {
+    position: relative;
+    max-width: 300px;
+    left: 80%;
+    display: block;
+    z-index: 3;
+    text-align: center;
+    animation: ghostUpdown2 3s infinite alternate;
+}
+
+.stoneHead img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+@keyframes ghostUpdown2 {
+    0% {
+        top: 10px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox14 {
+        background: url("../img/background/bg-marble.jpg") no-repeat;
+        background-size: cover;
+    }
+    .parallex4 {
+        padding-bottom: 1500px;
+    }
+    .vkOption {
+        display: none;
+    }
+    .stoneHead {
+        display: none;
+    }
+}
+
+
+
+
+
+/*============== unit15 star =================*/
+
+.idx15 {
+    width: 100%;
+    padding-bottom: 360px;
+    overflow: hidden;
+}
+
+.mainBox15 {
+    position: relative;
+    background: url("../img/background/asset\ 154-2.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainBox15 .bt15 {
+    background: url("../img/icon/logo-15.png") no-repeat fixed;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height: 200px;
+    display: block;
+    text-align: center;
+    z-index: 3;
+}
+
+.darkMask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+footer {
+    position: relative;
+    top: 300px;
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.hr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px 5px 5px 5px;
+    background: url("../img/background/asset 173.png") repeat-x bottom;
+}
+
+.accbox {
+    margin: auto;
+    padding: 40px 80px 40px 80px;
+    color: #756b5f;
+    z-index: 3;
+    background: url(../img/background/bg15.png);
+}
+
+.SquareMap {
+    padding-top: 15px;
+}
+
+#map {
+    position: relative;
+    width: 330px;
+    height: 330px;
+}
+
+#map img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 80%;
+}
+
+.footerText {
+    text-align: left;
+    padding-left: 20px;
+    font: 16px/18px "Gill Sans MT";
+    line-height: 22px;
+}
+
+.accboxhd .footerText p {
+    margin: 2px 0 25px 0;
+}
+
+.accboxhd .footerText a {
+    color: #756b5f;
+}
+
+.accboxbd {
+    font: 16px/18px "Gill Sans MT";
+    line-height: 22px;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 5px 0 5px;
+}
+
+.accboxbd .left {
+    float: left;
+    width: 280px;
+}
+
+.accboxbd .right {
+    float: right;
+    width: 350px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 100px;
+    z-index: 3;
+    font: 14px/18px "Gill Sans MT";
+    color: #827a70;
+}
+
+@media screen and (max-width: 767px) {
+    .mainBox15 .bt15 {
+        display: none;
+    }
+    .mainBox15 {
+        background: url("../img/background/asset\ 154-2.jpg") -1000px no-repeat;
+        background-size: cover;
+    }
+    .bt15Rwd {
+        background: url("../img/icon/logo-15.png") no-repeat;
+        background-position: -30px 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 200px;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .hr {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5px 5px 5px 5px;
+        background: url("../img/background/asset 173.png") repeat-x bottom;
+    }
+    .accbox {
+        margin: auto;
+        padding: 0;
+        color: #756b5f;
+        z-index: 3;
+        background: url(../img/background/bg15.png);
+    }
+    .SquareMap {
+        padding-top: 15px;
+    }
+    #map {
+        position: relative;
+        width: 330px;
+        height: 330px;
+    }
+    #map img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 80%;
+    }
+    .accboxbd .left {
+        float: left;
+        width: 100%;
+        padding: 0px 15px 20px 15px;
+    }
+
+    .accboxbd .right {
+        float: left;
+        padding: 0px 15px 20px 15px;
+    }
+    .copyright {
+        position: absolute;
+        width: 300px;
+        left: 10%;
+        z-index: 3;
+        font: 14px/16px "Gill Sans MT";
+        color: #827a70;
+    }
+    .accboxbd {
+        font: 16px/18px "Gill Sans MT";
+        line-height: 22px;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+
+
+
+
+/*============== back_Top =================*/
+
+.back_Top {
+    right: 40px;
+    bottom: 40px;
+    padding: 0px 20px;
+    height: 48px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    overflow: hidden;
+    z-index: 20;
+    opacity: 1;
+    transform: rotate(180deg);
+    transition: all 0.4s ease-in-out 0s;
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+.back_Top img {
+    height: 20px;
+    margin-bottom: -10px;
+    animation-name: gotop;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-delay: 1000ms;
+}
+
+.back_Top img:hover {
+    opacity: .6;
+}
+
+@keyframes gotop {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0
+    }
+    33% {
+        opacity: 1
+    }
+    66% {
+        opacity: 1
+    }
+    100% {
+        transform: translate3d(0, 15px, 0);
+        opacity: 0
+    }
+}
