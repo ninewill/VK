@@ -281,16 +281,24 @@ nav:hover {
 .tIcons.toggle svg:last-child {
     transform: scale(1);
 }
+.rwdTopmenu{
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 50px;
+    z-index: 20;
+}
 
 .rwd-menu {
-    background: #111;
+    background: rgba(0,0,0,.6);
     margin-top: 10px;
-    padding: 10px;
     display: none;
-    width: 200px;
+    width: 100%;
+    height: 100%;
     top: 50px;
     position: fixed;
     z-index: 20;
+    margin: auto;
 }
 
 .rwd-menu li {
@@ -300,7 +308,8 @@ nav:hover {
     text-transform: uppercase;
     font-family: sans-serif;
     font-weight: 600;
-    padding-bottom: 15px;
+    margin: 5px 0px;
+    padding: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -323,6 +332,7 @@ a:focus {
     #rwd-main-menu {
         display: block;
     }
+
 }
 
 
@@ -616,7 +626,7 @@ a:focus {
     margin: auto;
     display: block;
     z-index: 3;
-    text-align: center;
+    text-align: left;
 }
 
 .contxt2 h2 {
@@ -625,12 +635,11 @@ a:focus {
 }
 
 .contxt2 p {
-    line-height: 20px;
+    line-height: 25px;
 }
 
 .contxtbd {
-    margin: 0 0 10px 0;
-    padding: 0 8px;
+    margin: 0 0 20px 0;
     clear: both;
     display: block;
     overflow: hidden;
@@ -772,7 +781,6 @@ a:focus {
     background-image: url("../img/icon/asset 176.png");
     cursor: pointer;
 }
-
 @media screen and (max-width: 767px) {
     .mainBox2 .bt2 {
         display: none;
@@ -824,6 +832,9 @@ a:focus {
     .contxt2 {
         padding-top: 50px;
         font: 16px/18px "Gill Sans MT";
+    }
+    .contxtbd {
+        padding: 0 8px;
     }
     .contxt2 p {
         line-height: 30px;
@@ -898,6 +909,9 @@ a:focus {
         height: 41px;
         background-image: url("../img/icon/asset 176.png");
         cursor: pointer;
+    }
+    .contxtbd {
+        margin: 0;
     }
 }
 
@@ -1068,7 +1082,7 @@ a:focus {
     margin: auto;
     display: block;
     z-index: 3;
-    text-align: center;
+    text-align: left;
 }
 
 .contxt4 h2 {
@@ -1096,7 +1110,7 @@ a:focus {
     }
     .idx4 {
         width: 100%;
-        padding-bottom: 250px;
+        padding-bottom: 210px;
     }
 
     .mainBox4 {
@@ -1305,7 +1319,7 @@ a:focus {
     margin: auto;
     display: block;
     z-index: 3;
-    text-align: center;
+    text-align: left;
 }
 
 .contxt6 h2 {
@@ -1318,6 +1332,9 @@ a:focus {
 }
 
 @media screen and (max-width: 767px) {
+    .idx6 {
+        padding-bottom: 465px;
+    }
     .mainBox6 .bt6 {
         display: none;
     }
@@ -1452,14 +1469,13 @@ a:focus {
 
 .contxt8 {
     position: relative;
-    /*    top: 300px;*/
     font: 16px/18px "Gill Sans MT";
     color: #968673;
     max-width: 960px;
     margin: auto;
     display: block;
     z-index: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .page {
@@ -1620,7 +1636,7 @@ a:focus {
         display: none;
     }
     .idx8 {
-        padding-bottom: 50px;
+        padding-bottom: 15px;
     }
     .mainBox8 {
         background: url("../img/background/asset 20.jpeg") no-repeat;
@@ -1841,13 +1857,18 @@ a:focus {
     z-index: 3;
     text-align: center;
 }
-
+.contxt10 h2{
+    font-size: 25px;
+    line-height: 25px;
+}
 .contxt10 .contxthd .txt p {
-    padding-top: 15px;
+    padding: 15px 0px;
+    line-height: 25px;
 }
 
 .contxt10 .contxtft .txt p {
-    padding-top: 15px;
+    padding: 15px 0px;
+    line-height: 25px;
 }
 
 .contxt10 .contxthd {
@@ -1866,6 +1887,7 @@ a:focus {
     zoom: 1;
     vertical-align: top;
     line-height: 23px;
+    text-align: left;
 }
 
 .contxt10 .contxtft {
@@ -1880,6 +1902,7 @@ a:focus {
     float: right;
     vertical-align: top;
     line-height: 20px;
+    text-align: left;
 }
 
 .pot img {
@@ -2129,6 +2152,9 @@ a:focus {
     .vkTitleRwd {
         display: block;
         align-self: center;
+    }
+    .vkTitleRwd img{
+        width: 100%;
     }
     .aboutTxt {
         padding: 20px;
@@ -2626,11 +2652,12 @@ a:focus {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 300px;
+        max-width: 100%;
         padding-top: 100px;
         margin: auto;
         z-index: 3;
         padding-bottom: 100px;
+        padding-left: 0px;
     }
     .slickBox1 .photo {
         overflow: hidden;
@@ -2638,20 +2665,39 @@ a:focus {
         height: 262px;
     }
     .newsTitle {
-        align-self: flex-start;
+        align-self: center;
         padding-bottom: 10px;
     }
     .slickBox1 {
-        width: 262px;
+        align-self: center;
+        width: 80%;
     }
     .slickBox2 {
-        width: 262px;
+        align-self: center;
+        width: 80%;
     }
     .slickBox3 {
-        width: 262px;
+        align-self: center;
+        width: 80%;
     }
     .slickBox4 {
-        width: 262px;
+        align-self: center;
+        width: 80%;
+    }
+    .slick-slide {
+        padding: 0 ;
+    }
+
+    .slick-current {
+        padding: 0 ;
+    }
+
+    .slick-current2 {
+        padding: 0;
+    }
+
+    .slick-current3 {
+        padding: 0;
     }
 }
 
@@ -2712,13 +2758,19 @@ a:focus {
 
 .bgPoint01 {
     position: absolute;
-    top: 0;
-    left: 0px;
     width: 100%;
     height: 100%;
-    background: url("../img/background/point.png") repeat;
-    opacity: .6;
     z-index: 4;
+    background-image: linear-gradient(transparent 90%, #000 50%),
+                      linear-gradient(90deg, transparent 50%, #000 50%);
+  background-size: 2px 2px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  opacity: 1;
+  transition: opacity 3s;
+}
+.people:hover .bgPoint01 {
+  opacity: 0;
 }
 
 .vkOption {
@@ -2929,6 +2981,12 @@ fieldset .btn {
         top: 100px;
     }
 }
+.Ancient img{
+  position: absolute;
+  width: 50%;
+  top: 600px;
+  right: 30%;
+}
 
 @media screen and (max-width: 767px) {
     .mainBox14 {
@@ -2943,6 +3001,9 @@ fieldset .btn {
     }
     .stoneHead {
         display: none;
+    }
+    .Ancient img{
+      display: none;
     }
 }
 
@@ -3125,11 +3186,14 @@ footer {
         float: left;
         width: 100%;
         padding: 0px 15px 20px 15px;
+        box-sizing: border-box;
     }
 
     .accboxbd .right {
         float: left;
+        width: 100%;
         padding: 0px 15px 20px 15px;
+        box-sizing: border-box;
     }
     .copyright {
         position: absolute;
@@ -3138,6 +3202,7 @@ footer {
         z-index: 3;
         font: 14px/16px "Gill Sans MT";
         color: #827a70;
+        box-sizing: border-box;
     }
     .accboxbd {
         font: 16px/18px "Gill Sans MT";
