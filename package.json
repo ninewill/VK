@@ -1,0 +1,26 @@
+{
+  "name": "vk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninewill/VK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninewill/VK/issues"
+  },
+  "homepage": "https://github.com/ninewill/VK#readme"
+}
